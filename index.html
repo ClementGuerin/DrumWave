@@ -24,5 +24,14 @@
         </ul>
     </div>
 </body>
-<script href="js/script.js"></script>
+<script>
+        document.addEventListener('keydown', function(event){
+        var vroom = document.querySelector('.grid');
+        vroom.classList.add("BOOST");
+        });
+        document.addEventListener('keyup', function(event){
+        var vroom = document.querySelector('.grid');
+        vroom.classList.remove("BOOST");
+        });
+</script>
 </html>

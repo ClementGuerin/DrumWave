@@ -60,6 +60,7 @@
 
 .BOOST{
     animation: scrolling 3s infinite !important;
+    animation-timing-function: linear !important;
 }
 
 .numpad{
