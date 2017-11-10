@@ -23,7 +23,7 @@ function checkKey(){
    // console.log(event.keyCode); // Affiche le keyCode de la touche pressé dans la console
     
         if (Khey == '97' || Khey == '98' || Khey == '99' || Khey == '100' || Khey == '101' || Khey == '102' || Khey == '103' || Khey == '104' || Khey == '105') {
-            document.getElementById("grid").classList.add('BOOST');
+            document.getElementById("grid").classList.add('grid-active');
         }
     
         if (Khey == '97'){
@@ -86,7 +86,7 @@ function resetKey(){
         var Khey = event.keyCode;
     
         if (Khey == '97' || Khey == '98' || Khey == '99' || Khey == '100' || Khey == '101' || Khey == '102' || Khey == '103' || Khey == '104' || Khey == '105') {
-            document.getElementById("grid").classList.remove('BOOST');
+            document.getElementById("grid").classList.remove('grid-active');
         }
     
         if (Khey == '97'){
