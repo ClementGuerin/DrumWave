@@ -25,33 +25,6 @@
         top: 0px;
         opacity: 0.05;
     }
-    10%{
-        opacity: 0.15;
-    }
-    20%{
-        opacity: 0.05;
-    }
-    30%{
-        opacity: 0.15;
-    }
-    40%{
-        opacity: 0.05;
-    }
-    50%{
-        opacity: 0.15;
-    }
-    60%{
-        opacity: 0.05;
-    }
-    70%{
-        opacity: 0.15;
-    }
-    80%{
-        opacity: 0.05;
-    }
-    90%{
-        opacity: 0.15;
-    }
     100%{
         top: -1000px;
         opacity: 0.05;
@@ -59,7 +32,7 @@
 }
 
 .BOOST{
-    animation: scrolling 3s infinite !important;
+    animation: scrolling 1s infinite !important;
     animation-timing-function: linear !important;
 }
 
@@ -92,13 +65,13 @@
     margin-bottom: 20px;
     background: rgba(255, 255, 255, 0.1);
     font-weight: bold;
-    transition: 0.45s;
+    transition: 0.1s;
     cursor: pointer;
     border: solid 2px transparent;
 }
 
-.numpad ul li:hover{
-    color: #fff;
-    border: solid 2px #fff;
-    background: rgba(255, 255, 255, 0.25);
+.number-numpad-active{
+    color: #fff !important;
+    border: solid 2px #fff !important;
+    background: rgba(255, 255, 255, 0.25) !important;
 }
