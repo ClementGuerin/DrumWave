@@ -18,6 +18,7 @@
     animation: scrolling 10s infinite;
     animation-timing-function: linear;
     position: relative;
+    width: 100%;
 }
 
 @keyframes scrolling{
