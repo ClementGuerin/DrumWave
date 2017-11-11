@@ -3,6 +3,8 @@ document.body.addEventListener("keyup", resetKey);
 
 /* -- AUDIO -- */
 
+// Liste des sons
+
 var sound_1 = new Audio('./sounds/1.wav');
 var sound_2 = new Audio('./sounds/2.wav');
 var sound_3 = new Audio('./sounds/3.wav');
@@ -13,7 +15,11 @@ var sound_7 = new Audio('./sounds/7.wav');
 var sound_8 = new Audio('./sounds/8.wav');
 var sound_9 = new Audio('./sounds/9.wav');
 
+var soundFormat = '.wav';
+
 /* ----------- */
+
+
 
 function checkKey(){
     
@@ -36,57 +42,69 @@ function checkKey(){
         }
     
         if (Khey == '97' || Khey == '49'){
-            document.getElementById("number-numpad-1").classList.add('number-numpad-active');
-            sound_1.load();
-            sound_1.play();
+            var keyID = 1;
+            keyActive();
+            launchSound();
         }
     
         if (Khey == '98' || Khey == '50'){
-            document.getElementById("number-numpad-2").classList.add('number-numpad-active');
-            sound_2.load();
-            sound_2.play();
+            var keyID = 2;
+            keyActive();
+            launchSound();
         }
     
         if (Khey == '99' || Khey == '51'){
-            document.getElementById("number-numpad-3").classList.add('number-numpad-active');
-            sound_3.load();
-            sound_3.play();
+            var keyID = 3;
+            keyActive();
+            launchSound();
         }
     
         if (Khey == '100' || Khey == '52'){
-            document.getElementById("number-numpad-4").classList.add('number-numpad-active');
-            sound_4.load();
-            sound_4.play();
+            var keyID = 4;
+            keyActive();
+            launchSound();
         }
     
         if (Khey == '101' || Khey == '53'){
-            document.getElementById("number-numpad-5").classList.add('number-numpad-active');
-            sound_5.load();
-            sound_5.play();
+            var keyID = 5;
+            keyActive();
+            launchSound();
         }
     
         if (Khey == '102' || Khey == '54'){
-            document.getElementById("number-numpad-6").classList.add('number-numpad-active');
-            sound_6.load();
-            sound_6.play();
+            var keyID = 6;
+            keyActive();
+            launchSound();
         }
     
         if (Khey == '103' || Khey == '55'){
-            document.getElementById("number-numpad-7").classList.add('number-numpad-active');
-            sound_7.load();
-            sound_7.play();
+            var keyID = 7;
+            keyActive();
+            launchSound();
         }
     
         if (Khey == '104' || Khey == '56'){
-            document.getElementById("number-numpad-8").classList.add('number-numpad-active');
-            sound_8.load();
-            sound_8.play();
+            var keyID = 8;
+            keyActive();
+            launchSound();
         }
     
         if (Khey == '105' || Khey == '57'){
-            document.getElementById("number-numpad-9").classList.add('number-numpad-active');
-            sound_9.load();
-            sound_9.play();
+            var keyID = 9;
+            keyActive();
+            launchSound();
+        }
+    
+    // Fonction qui allume la touche
+        function keyActive(){
+            document.getElementById('number-numpad-'+keyID).classList.add('number-numpad-active');
+        }
+    
+    // Fonction qui balance le gros on's sa mère
+        function launchSound(){
+            var soundID = new Audio('./sounds/'+keyID+soundFormat);
+            soundID.load();
+            soundID.play();
         }
 }
 
@@ -107,53 +125,52 @@ function resetKey(){
         }
     
         if (Khey == '97' || Khey == '49'){
-            document.getElementById("number-numpad-1").classList.remove('number-numpad-active');
+            var keyID = 1;
+            keyOff();
         }
     
         if (Khey == '98' || Khey == '50'){
-            document.getElementById("number-numpad-2").classList.remove('number-numpad-active');
+            var keyID = 2;
+            keyOff();
         }
     
         if (Khey == '99' || Khey == '51'){
-            document.getElementById("number-numpad-3").classList.remove('number-numpad-active');
+            var keyID = 3;
+            keyOff();
         }
     
         if (Khey == '100' || Khey == '52'){
-            document.getElementById("number-numpad-4").classList.remove('number-numpad-active');
+            var keyID = 4;
+            keyOff();
         }
     
         if (Khey == '101' || Khey == '53'){
-            document.getElementById("number-numpad-5").classList.remove('number-numpad-active');
+            var keyID = 5;
+            keyOff();
         }
     
         if (Khey == '102' || Khey == '54'){
-            document.getElementById("number-numpad-6").classList.remove('number-numpad-active');
+            var keyID = 6;
+            keyOff();
         }
     
         if (Khey == '103' || Khey == '55'){
-            document.getElementById("number-numpad-7").classList.remove('number-numpad-active');
+            var keyID = 7;
+            keyOff();
         }
     
         if (Khey == '104' || Khey == '56'){
-            document.getElementById("number-numpad-8").classList.remove('number-numpad-active');
+            var keyID = 8;
+            keyOff();
         }
     
         if (Khey == '105' || Khey == '57'){
-            document.getElementById("number-numpad-9").classList.remove('number-numpad-active');
+            var keyID = 9;
+            keyOff();
         }
+    
+        // Fonction qui éteint la touche
+            function keyOff(){
+                document.getElementById('number-numpad-'+keyID).classList.remove('number-numpad-active');
+            }
 }
-
-
-/** 
-        
-        Ton code bro :
-
-        document.addEventListener('keydown', function(event){
-        var vroom = document.querySelector('.grid');
-        vroom.classList.add("BOOST");
-        });
-        document.addEventListener('keyup', function(event){
-        var vroom = document.querySelector('.grid');
-        vroom.classList.remove("BOOST");
-        }); 
-**/
