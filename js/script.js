@@ -42,62 +42,62 @@ function checkKey(){
         }
     
         if (Khey == '97' || Khey == '49'){
-            var keyID = 1;
+            var keyID = '1';
             keyActive();
             launchSound();
         }
     
         if (Khey == '98' || Khey == '50'){
-            var keyID = 2;
+            var keyID = '2';
             keyActive();
             launchSound();
         }
     
         if (Khey == '99' || Khey == '51'){
-            var keyID = 3;
+            var keyID = '3';
             keyActive();
             launchSound();
         }
     
         if (Khey == '100' || Khey == '52'){
-            var keyID = 4;
+            var keyID = '4';
             keyActive();
             launchSound();
         }
     
         if (Khey == '101' || Khey == '53'){
-            var keyID = 5;
+            var keyID = '5';
             keyActive();
             launchSound();
         }
     
         if (Khey == '102' || Khey == '54'){
-            var keyID = 6;
+            var keyID = '6';
             keyActive();
             launchSound();
         }
     
         if (Khey == '103' || Khey == '55'){
-            var keyID = 7;
+            var keyID = '7';
             keyActive();
             launchSound();
         }
     
         if (Khey == '104' || Khey == '56'){
-            var keyID = 8;
+            var keyID = '8';
             keyActive();
             launchSound();
         }
     
         if (Khey == '105' || Khey == '57'){
-            var keyID = 9;
+            var keyID = '9';
             keyActive();
             launchSound();
         }
     
     // Fonction qui allume la touche
         function keyActive(){
-            document.getElementById('number-numpad-'+keyID).classList.add('number-numpad-active');
+            document.getElementById('key-'+keyID).classList.add('key-active');
         }
     
     // Fonction qui balance le gros on's sa mère
@@ -107,6 +107,7 @@ function checkKey(){
             soundID.play();
         }
 }
+    
 
 function resetKey(){
     
@@ -125,52 +126,52 @@ function resetKey(){
         }
     
         if (Khey == '97' || Khey == '49'){
-            var keyID = 1;
+            var keyID = '1';
             keyOff();
         }
     
         if (Khey == '98' || Khey == '50'){
-            var keyID = 2;
+            var keyID = '2';
             keyOff();
         }
     
         if (Khey == '99' || Khey == '51'){
-            var keyID = 3;
+            var keyID = '3';
             keyOff();
         }
     
         if (Khey == '100' || Khey == '52'){
-            var keyID = 4;
+            var keyID = '4';
             keyOff();
         }
     
         if (Khey == '101' || Khey == '53'){
-            var keyID = 5;
+            var keyID = '5';
             keyOff();
         }
     
         if (Khey == '102' || Khey == '54'){
-            var keyID = 6;
+            var keyID = '6';
             keyOff();
         }
     
         if (Khey == '103' || Khey == '55'){
-            var keyID = 7;
+            var keyID = '7';
             keyOff();
         }
     
         if (Khey == '104' || Khey == '56'){
-            var keyID = 8;
+            var keyID = '8';
             keyOff();
         }
     
         if (Khey == '105' || Khey == '57'){
-            var keyID = 9;
+            var keyID = '9';
             keyOff();
         }
     
         // Fonction qui éteint la touche
             function keyOff(){
-                document.getElementById('number-numpad-'+keyID).classList.remove('number-numpad-active');
+                document.getElementById('key-'+keyID).classList.remove('key-active');
             }
 }

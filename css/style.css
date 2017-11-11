@@ -1,11 +1,14 @@
-.floor{
+.bg{
     position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(270deg, #123885, #0c0f3c, #2d1270, #161e96, #27337a, #30136b, #1a2045);
+    background-size: 1400% 1400%;
+
+    -webkit-animation: background 120s ease infinite;
+    -moz-animation: background 120s ease infinite;
+    animation: background 120s ease infinite;
 
 
 }
@@ -17,6 +20,9 @@
     position: relative;
     width: 100%;
     margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .grid-active{
@@ -25,23 +31,65 @@
     transform: scale(1.01,1.01);
 }
 
-@keyframes scrolling{
-    0%{
-        top: 0px;
-    }
-    100%{
-        top: -1000px;
-    }
+.keyboard-all{
+    display: inline-block;
+    border-radius: 15px;
+    border: solid 3px rgba(255, 255, 255, 0.1);
+    padding: 0px 40px 10px 20px;
+    position: fixed;
+    z-index: 2;
+    left: 20px;
+    bottom: 20px;
+    background: rgba(255, 255, 255, 0.06);
 }
 
+.keyboard{
+    width: 750px;
+    display: inline-block;
+}
+
+.keyboard ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.keyboard ul li{
+    text-align: center;
+    padding: 6px;
+    color: rgba(0, 0, 0, 0.55);
+    border-radius: 5px;
+    font-family: 'Rajdhani';
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    margin: 0px 8px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    cursor: pointer;
+    border: solid 2px transparent;
+    text-transform: uppercase;
+}
+
+.keyboard-line-1, .keyboard-line-2, .keyboard-line-3{
+    display: inline-flex;
+}
+
+.keyboard-line-2{
+    margin-left: 20px;
+}
+
+.keyboard-line-3{
+    margin-left: 50px;
+}
 
 .numpad{
     height: 280px;
     width: 200px;
-    border-radius: 10px;
-    position: fixed;
-    left: 50px;
-    bottom: 20px;
+    display: inline-block;
+    margin-left: 100px;
 }
 
 .numpad ul{
@@ -68,8 +116,41 @@
     border: solid 2px transparent;
 }
 
-.number-numpad-active{
+.key-active{
     color: #fff !important;
     border: solid 2px #fff !important;
     background: rgba(255, 255, 255, 0.25) !important;
+    transform: scale(1.1,1.1);
+    transition: 0.15s;
+}
+
+/* --------------------- */
+
+/* Keyframes */
+
+@keyframes scrolling{
+    0%{
+        top: 0px;
+    }
+    100%{
+        top: -1000px;
+    }
+}
+
+
+
+@-webkit-keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes background { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
