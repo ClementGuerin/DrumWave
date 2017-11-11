@@ -16,11 +16,13 @@
     animation-timing-function: linear;
     position: relative;
     width: 100%;
+    margin: auto;
 }
 
 .grid-active{
     opacity: 0.1!important;
-    filter: blur(3px);
+    filter: blur(1px);
+    transform: scale(1.01,1.01);
 }
 
 @keyframes scrolling{
@@ -62,7 +64,6 @@
     margin-bottom: 20px;
     background: rgba(255, 255, 255, 0.1);
     font-weight: bold;
-    transition: 0.1s;
     cursor: pointer;
     border: solid 2px transparent;
 }

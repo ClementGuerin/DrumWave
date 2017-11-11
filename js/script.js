@@ -20,61 +20,70 @@ function checkKey(){
     var Khey = event.keyCode;
 
     
-   // console.log(event.keyCode); // Affiche le keyCode de la touche pressé dans la console
+    console.log(event.keyCode); // Affiche le keyCode de la touche pressé dans la console
+    
+        
+        // Numpad Keys    
     
         if (Khey == '97' || Khey == '98' || Khey == '99' || Khey == '100' || Khey == '101' || Khey == '102' || Khey == '103' || Khey == '104' || Khey == '105') {
             document.getElementById("grid").classList.add('grid-active');
         }
     
-        if (Khey == '97'){
+        // No-Numpad Keys
+    
+        if (Khey == '49' || Khey == '50' || Khey == '51' || Khey == '52' || Khey == '53' || Khey == '54' || Khey == '55' || Khey == '56' || Khey == '57') {
+            document.getElementById("grid").classList.add('grid-active');
+        }
+    
+        if (Khey == '97' || Khey == '49'){
             document.getElementById("number-numpad-1").classList.add('number-numpad-active');
             sound_1.load();
             sound_1.play();
         }
     
-        if (Khey == '98'){
+        if (Khey == '98' || Khey == '50'){
             document.getElementById("number-numpad-2").classList.add('number-numpad-active');
             sound_2.load();
             sound_2.play();
         }
     
-        if (Khey == '99'){
+        if (Khey == '99' || Khey == '51'){
             document.getElementById("number-numpad-3").classList.add('number-numpad-active');
             sound_3.load();
             sound_3.play();
         }
     
-        if (Khey == '100'){
+        if (Khey == '100' || Khey == '52'){
             document.getElementById("number-numpad-4").classList.add('number-numpad-active');
             sound_4.load();
             sound_4.play();
         }
     
-        if (Khey == '101'){
+        if (Khey == '101' || Khey == '53'){
             document.getElementById("number-numpad-5").classList.add('number-numpad-active');
             sound_5.load();
             sound_5.play();
         }
     
-        if (Khey == '102'){
+        if (Khey == '102' || Khey == '54'){
             document.getElementById("number-numpad-6").classList.add('number-numpad-active');
             sound_6.load();
             sound_6.play();
         }
     
-        if (Khey == '103'){
+        if (Khey == '103' || Khey == '55'){
             document.getElementById("number-numpad-7").classList.add('number-numpad-active');
             sound_7.load();
             sound_7.play();
         }
     
-        if (Khey == '104'){
+        if (Khey == '104' || Khey == '56'){
             document.getElementById("number-numpad-8").classList.add('number-numpad-active');
             sound_8.load();
             sound_8.play();
         }
     
-        if (Khey == '105'){
+        if (Khey == '105' || Khey == '57'){
             document.getElementById("number-numpad-9").classList.add('number-numpad-active');
             sound_9.load();
             sound_9.play();
@@ -85,43 +94,51 @@ function resetKey(){
     
         var Khey = event.keyCode;
     
+        // Numpad Keys
+    
         if (Khey == '97' || Khey == '98' || Khey == '99' || Khey == '100' || Khey == '101' || Khey == '102' || Khey == '103' || Khey == '104' || Khey == '105') {
             document.getElementById("grid").classList.remove('grid-active');
         }
     
-        if (Khey == '97'){
+        // No-Numpad Keys
+    
+        if (Khey == '49' || Khey == '50' || Khey == '51' || Khey == '52' || Khey == '53' || Khey == '54' || Khey == '55' || Khey == '56' || Khey == '57') {
+            document.getElementById("grid").classList.remove('grid-active');
+        }
+    
+        if (Khey == '97' || Khey == '49'){
             document.getElementById("number-numpad-1").classList.remove('number-numpad-active');
         }
     
-        if (Khey == '98'){
+        if (Khey == '98' || Khey == '50'){
             document.getElementById("number-numpad-2").classList.remove('number-numpad-active');
         }
     
-        if (Khey == '99'){
+        if (Khey == '99' || Khey == '51'){
             document.getElementById("number-numpad-3").classList.remove('number-numpad-active');
         }
     
-        if (Khey == '100'){
+        if (Khey == '100' || Khey == '52'){
             document.getElementById("number-numpad-4").classList.remove('number-numpad-active');
         }
     
-        if (Khey == '101'){
+        if (Khey == '101' || Khey == '53'){
             document.getElementById("number-numpad-5").classList.remove('number-numpad-active');
         }
     
-        if (Khey == '102'){
+        if (Khey == '102' || Khey == '54'){
             document.getElementById("number-numpad-6").classList.remove('number-numpad-active');
         }
     
-        if (Khey == '103'){
+        if (Khey == '103' || Khey == '55'){
             document.getElementById("number-numpad-7").classList.remove('number-numpad-active');
         }
     
-        if (Khey == '104'){
+        if (Khey == '104' || Khey == '56'){
             document.getElementById("number-numpad-8").classList.remove('number-numpad-active');
         }
     
-        if (Khey == '105'){
+        if (Khey == '105' || Khey == '57'){
             document.getElementById("number-numpad-9").classList.remove('number-numpad-active');
         }
 }
