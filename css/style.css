@@ -68,7 +68,7 @@
     margin-bottom: 20px;
     background: rgba(255, 255, 255, 0.1);
     font-weight: bold;
-    cursor: pointer;
+    cursor: not-allowed;
     border: solid 2px transparent;
     text-transform: uppercase;
 }
@@ -112,7 +112,7 @@
     margin-bottom: 20px;
     background: rgba(255, 255, 255, 0.1);
     font-weight: bold;
-    cursor: pointer;
+    cursor: not-allowed;
     border: solid 2px transparent;
 }
 
@@ -121,8 +121,28 @@
     border: solid 2px #fff !important;
     background: rgba(255, 255, 255, 0.25) !important;
     transform: scale(1.1,1.1);
-    transition: 0.15s;
+    transition: 0.05s;
 }
+
+#keyboard-title{
+    font-family: 'Rajdhani';
+    color: #fff;
+    font-size: 32px;
+    margin-top: -50px;
+    animation: flash 2s infinite;
+    opacity: 0.3;
+    display: inline-block;
+    position: absolute;
+}
+
+.keyboard-title-nrv{
+    color: red !important;
+    animation: flashNRV 0.5s infinite !important;
+    font-weight: bold;
+    font-size: 52px !important;
+    margin-top: -70px !important;
+}
+
 
 /* --------------------- */
 
@@ -136,7 +156,6 @@
         top: -1000px;
     }
 }
-
 
 
 @-webkit-keyframes background {
@@ -153,4 +172,29 @@
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+
+
+@keyframes flash{
+    0%{
+        opacity: 0.3
+    }
+    50%{
+        opacity: 0.15
+    }
+    100%{
+        opacity: 0.3
+    }
+}
+
+@keyframes flashNRV{
+    0%{
+        opacity: 0.8
+    }
+    50%{
+        opacity: 0.5
+    }
+    100%{
+        opacity: 0.8
+    }
 }
