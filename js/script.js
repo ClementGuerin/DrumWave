@@ -2,22 +2,24 @@ document.body.addEventListener("keydown", checkKey);
 document.body.addEventListener("keyup", resetKey);
 document.getElementById("keyboard").addEventListener("click", click);
 
-
 /* -- AUDIO -- */
 
-// Liste des sons
-
-var sound_1 = new Audio('./sounds/1.wav');
-var sound_2 = new Audio('./sounds/2.wav');
-var sound_3 = new Audio('./sounds/3.wav');
-var sound_4 = new Audio('./sounds/4.wav');
-var sound_5 = new Audio('./sounds/5.wav');
-var sound_6 = new Audio('./sounds/6.wav');
-var sound_7 = new Audio('./sounds/7.wav');
-var sound_8 = new Audio('./sounds/8.wav');
-var sound_9 = new Audio('./sounds/9.wav');
-
 var soundFormat = '.wav';
+
+/* -- PACKS -- */
+
+
+var packIsClicked = 0;
+
+function packmorty(){
+    packIsClicked = 1;
+}
+
+function pack8bit(){
+    packIsClicked = 0;
+}
+
+
 
 /* ----------- */
 
@@ -27,15 +29,25 @@ function checkKey() {
 
     var Khey = event.keyCode;
 
-    document.getElementById("keyboard-title").innerHTML = "Use your keyboard";
-    document.getElementById("keyboard-title").classList.remove('keyboard-title-nrv');
+    
+    if(clickWarning = true){
+        document.getElementById("keyboard-title").innerHTML = "Use your keyboard";
+        document.getElementById("keyboard-title").classList.remove('keyboard-title-nrv');
+        var clickWarning = false;
+    }
+    
+    if(packIsClicked == 1){
+        soundPack = 'morty'
+    } else if (packIsClicked == 0) {
+        soundPack = '8bit'
+    }
 
-    console.log(event.keyCode); // Affiche le keyCode de la touche pressé dans la console
+    // console.log(event.keyCode); // Affiche le keyCode de la touche pressé dans la console
 
 
     // Keys
 
-    if (Khey == '97' || Khey == '98' || Khey == '99' || Khey == '100' || Khey == '101' || Khey == '102' || Khey == '103' || Khey == '104' || Khey == '105' || Khey == '49' || Khey == '50' || Khey == '51' || Khey == '52' || Khey == '53' || Khey == '54' || Khey == '55' || Khey == '56' || Khey == '57') {
+    if (Khey == '49' || Khey == '50' || Khey == '51' || Khey == '52' || Khey == '53' || Khey == '54' || Khey == '55' || Khey == '56' || Khey == '57' || Khey == '65' || Khey == '66' || Khey == '67' || Khey == '68' || Khey == '69' || Khey == '70' || Khey == '71' || Khey == '72' || Khey == '73' || Khey == '74' || Khey == '75' || Khey == '76' || Khey == '77' || Khey == '78' || Khey == '79' || Khey == '80' || Khey == '81' || Khey == '82' || Khey == '83' || Khey == '84' || Khey == '85' || Khey == '86' || Khey == '87' || Khey == '88' || Khey == '89' || Khey == '90' || Khey == '97' || Khey == '98' || Khey == '99' || Khey == '100' || Khey == '101' || Khey == '102' || Khey == '103' || Khey == '104' || Khey == '105') {
         document.getElementById("grid").classList.add('grid-active');
     }
 
@@ -232,10 +244,17 @@ function checkKey() {
 
     // Fonction qui balance le gros on's sa mère
     function launchSound() {
-        var soundID = new Audio('./sounds/' + keyID + soundFormat);
+        
+        if(Khey == '49' || Khey == '50' || Khey == '51' || Khey == '52' || Khey == '53' || Khey == '54' || Khey == '55' || Khey == '56' || Khey == '57' || Khey == '97' || Khey == '98' || Khey == '99' || Khey == '100' || Khey == '101' || Khey == '102' || Khey == '103' || Khey == '104' || Khey == '105'){
+            var soundID = new Audio('./sounds/' + keyID + soundFormat);
+        } else {
+            var soundID = new Audio('./sounds/' + soundPack + '/' + soundPack + '_' + keyID + soundFormat);
+            
+        }
         soundID.load();
         soundID.play();
     }
+    
 }
 
 
@@ -245,7 +264,7 @@ function resetKey() {
 
     //  Keys
 
-    if (Khey == '97' || Khey == '98' || Khey == '99' || Khey == '100' || Khey == '101' || Khey == '102' || Khey == '103' || Khey == '104' || Khey == '105' || Khey == '49' || Khey == '50' || Khey == '51' || Khey == '52' || Khey == '53' || Khey == '54' || Khey == '55' || Khey == '56' || Khey == '57') {
+    if (Khey == '49' || Khey == '50' || Khey == '51' || Khey == '52' || Khey == '53' || Khey == '54' || Khey == '55' || Khey == '56' || Khey == '57' || Khey == '65' || Khey == '66' || Khey == '67' || Khey == '68' || Khey == '69' || Khey == '70' || Khey == '71' || Khey == '72' || Khey == '73' || Khey == '74' || Khey == '75' || Khey == '76' || Khey == '77' || Khey == '78' || Khey == '79' || Khey == '80' || Khey == '81' || Khey == '82' || Khey == '83' || Khey == '84' || Khey == '85' || Khey == '86' || Khey == '87' || Khey == '88' || Khey == '89' || Khey == '90' || Khey == '97' || Khey == '98' || Khey == '99' || Khey == '100' || Khey == '101' || Khey == '102' || Khey == '103' || Khey == '104' || Khey == '105') {
         document.getElementById("grid").classList.remove('grid-active');
     }
 
@@ -407,4 +426,5 @@ function resetKey() {
 function click() {
     document.getElementById("keyboard-title").innerHTML = "Use ur fucking Keyboard OMG!!!";
     document.getElementById("keyboard-title").classList.add('keyboard-title-nrv');
+    var clickWarning = true;
 }
