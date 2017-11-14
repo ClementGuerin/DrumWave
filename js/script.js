@@ -55,14 +55,18 @@ function checkKey() {
         soundPack = 'ocarina'
     }
     
-
+    console.log(Khey);
     // console.log(event.keyCode); // Affiche le keyCode de la touche pressé dans la console
 
 
     // Keys
-
     if (Khey == '49' || Khey == '50' || Khey == '51' || Khey == '52' || Khey == '53' || Khey == '54' || Khey == '55' || Khey == '56' || Khey == '57' || Khey == '65' || Khey == '66' || Khey == '67' || Khey == '68' || Khey == '69' || Khey == '70' || Khey == '71' || Khey == '72' || Khey == '73' || Khey == '74' || Khey == '75' || Khey == '76' || Khey == '77' || Khey == '78' || Khey == '79' || Khey == '80' || Khey == '81' || Khey == '82' || Khey == '83' || Khey == '84' || Khey == '85' || Khey == '86' || Khey == '87' || Khey == '88' || Khey == '89' || Khey == '90' || Khey == '97' || Khey == '98' || Khey == '99' || Khey == '100' || Khey == '101' || Khey == '102' || Khey == '103' || Khey == '104' || Khey == '105') {
-        document.getElementById("grid").classList.add('grid-active');
+        if (soundPack == 'ocarina') {
+            if (Khey == '72' || Khey == '74' || Khey == '75' || Khey == '76' || Khey == '77' || Khey == '87' || Khey == '88' || Khey == '67' || Khey == '86' || Khey == '66' || Khey == '78') {
+                return;
+            }
+        }
+        document.getElementById("grid").classList.add('grid-active'); 
     }
 
     if (Khey == '97' || Khey == '49') {
