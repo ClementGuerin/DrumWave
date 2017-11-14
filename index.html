@@ -7,17 +7,20 @@
     <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
 </head>
 <body id="body">
-   <div class="packs">
+   <div class="packs" onclick="checkPackActive()">
        <ul>
-           <li id="default" onclick="pack8bit()">
+           <li id="8bit" onclick="pack8bit()" class="pack-active">
                <img src="img/8bit.png" alt="8 Bit">
            </li>
-           <li id="morty" onclick="packmorty()">
-               <img src="img/morty.png" alt="Rick and Morty">
+           <li id="vaporwave" onclick="packvaporwave()">
+               <img src="img/vaporwave.png" alt="vaporwave">
+           </li>
+           <li id="ocarina" onclick="packocarina()">
+               <img src="img/ocarina.png" alt="Ocarina nul">
            </li>
        </ul>
    </div>
-    <div id="keyboard" class="keyboard-all">
+    <div id="keyboard" class="keyboard-all noselect">
        <h3 id="keyboard-title">Use your keyboard</h3>
         <div class="keyboard">
             <ul>

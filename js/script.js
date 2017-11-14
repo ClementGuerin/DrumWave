@@ -11,13 +11,23 @@ var soundFormat = '.wav';
 
 var packIsClicked = 0;
 
-function packmorty(){
-    packIsClicked = 1;
-}
-
 function pack8bit(){
     packIsClicked = 0;
+    KheyBlocked();
 }
+
+function packvaporwave(){
+    packIsClicked = 1;
+    KheyBlocked();
+}
+
+function packocarina(){
+    packIsClicked = 2;
+    KheyBlocked();
+}
+
+
+
 
 
 
@@ -36,11 +46,15 @@ function checkKey() {
         var clickWarning = false;
     }
     
-    if(packIsClicked == 1){
-        soundPack = 'morty'
-    } else if (packIsClicked == 0) {
+    
+    if(packIsClicked == 0){
         soundPack = '8bit'
+    } else if (packIsClicked == 1) {
+        soundPack = 'vaporwave'
+    } else if (packIsClicked == 2) {
+        soundPack = 'ocarina'
     }
+    
 
     // console.log(event.keyCode); // Affiche le keyCode de la touche pressé dans la console
 
@@ -248,7 +262,7 @@ function checkKey() {
         if(Khey == '49' || Khey == '50' || Khey == '51' || Khey == '52' || Khey == '53' || Khey == '54' || Khey == '55' || Khey == '56' || Khey == '57' || Khey == '97' || Khey == '98' || Khey == '99' || Khey == '100' || Khey == '101' || Khey == '102' || Khey == '103' || Khey == '104' || Khey == '105'){
             var soundID = new Audio('./sounds/' + keyID + soundFormat);
         } else {
-            var soundID = new Audio('./sounds/' + soundPack + '/' + soundPack + '_' + keyID + soundFormat);
+            var soundID = new Audio('./sounds/' + soundPack + '/' + keyID + soundFormat);
             
         }
         soundID.load();
@@ -427,4 +441,67 @@ function click() {
     document.getElementById("keyboard-title").innerHTML = "Use ur fucking Keyboard OMG!!!";
     document.getElementById("keyboard-title").classList.add('keyboard-title-nrv');
     var clickWarning = true;
+}
+
+function checkPackActive(){
+    if(packIsClicked == 0){
+        document.getElementById("8bit").classList.add('pack-active');
+    } else {
+        document.getElementById("8bit").classList.remove('pack-active');
+    }
+
+    if(packIsClicked == 1){
+        document.getElementById("vaporwave").classList.add('pack-active');
+    } else {
+        document.getElementById("vaporwave").classList.remove('pack-active');
+    }
+
+    if(packIsClicked == 2){
+        document.getElementById("ocarina").classList.add('pack-active');
+    } else {
+        document.getElementById("ocarina").classList.remove('pack-active');
+    }
+}
+
+function KheyBlocked(){
+        if(packIsClicked == 2){
+        document.getElementById("key-h").classList.add('key-desactive');
+        document.getElementById("key-j").classList.add('key-desactive');
+        document.getElementById("key-k").classList.add('key-desactive');
+        document.getElementById("key-l").classList.add('key-desactive');
+        document.getElementById("key-m").classList.add('key-desactive');
+        document.getElementById("key-w").classList.add('key-desactive');
+        document.getElementById("key-x").classList.add('key-desactive');
+        document.getElementById("key-c").classList.add('key-desactive');
+        document.getElementById("key-v").classList.add('key-desactive');
+        document.getElementById("key-b").classList.add('key-desactive');
+        document.getElementById("key-n").classList.add('key-desactive');
+    } else {
+        document.getElementById("key-a").classList.remove('key-desactive');
+        document.getElementById("key-z").classList.remove('key-desactive');
+        document.getElementById("key-e").classList.remove('key-desactive');
+        document.getElementById("key-r").classList.remove('key-desactive');
+        document.getElementById("key-t").classList.remove('key-desactive');
+        document.getElementById("key-y").classList.remove('key-desactive');
+        document.getElementById("key-u").classList.remove('key-desactive');
+        document.getElementById("key-i").classList.remove('key-desactive');
+        document.getElementById("key-o").classList.remove('key-desactive');
+        document.getElementById("key-p").classList.remove('key-desactive');
+        document.getElementById("key-q").classList.remove('key-desactive');
+        document.getElementById("key-s").classList.remove('key-desactive');
+        document.getElementById("key-d").classList.remove('key-desactive');
+        document.getElementById("key-f").classList.remove('key-desactive');
+        document.getElementById("key-g").classList.remove('key-desactive');
+        document.getElementById("key-h").classList.remove('key-desactive');
+        document.getElementById("key-j").classList.remove('key-desactive');
+        document.getElementById("key-k").classList.remove('key-desactive');
+        document.getElementById("key-l").classList.remove('key-desactive');
+        document.getElementById("key-m").classList.remove('key-desactive');
+        document.getElementById("key-w").classList.remove('key-desactive');
+        document.getElementById("key-x").classList.remove('key-desactive');
+        document.getElementById("key-c").classList.remove('key-desactive');
+        document.getElementById("key-v").classList.remove('key-desactive');
+        document.getElementById("key-b").classList.remove('key-desactive');
+        document.getElementById("key-n").classList.remove('key-desactive');
+    }
 }

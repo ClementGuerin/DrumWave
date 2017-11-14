@@ -6,9 +6,9 @@
     background: linear-gradient(270deg, #123885, #0c0f3c, #2d1270, #161e96, #27337a, #30136b, #1a2045);
     background-size: 1400% 1400%;
 
-    -webkit-animation: background 120s ease infinite;
-    -moz-animation: background 120s ease infinite;
-    animation: background 120s ease infinite;
+    -webkit-animation: background 60s ease infinite;
+    -moz-animation: background 60s ease infinite;
+    animation: background 60s ease infinite;
 
 
 }
@@ -28,7 +28,7 @@
 .grid-active{
     opacity: 0.1!important;
     filter: blur(1px);
-    transform: scale(1.01,1.01);
+    transform: scale(1.025,1.025);
 }
 
 .keyboard-all{
@@ -41,6 +41,7 @@
     left: 20px;
     bottom: 20px;
     background: rgba(255, 255, 255, 0.06);
+    cursor: not-allowed;
 }
 
 .keyboard{
@@ -112,7 +113,6 @@
     margin-bottom: 20px;
     background: rgba(255, 255, 255, 0.1);
     font-weight: bold;
-    cursor: not-allowed;
     border: solid 2px transparent;
 }
 
@@ -121,6 +121,13 @@
     border: solid 2px #fff !important;
     background: rgba(255, 255, 255, 0.25) !important;
     transform: scale(1.1,1.1);
+}
+
+.key-desactive{
+    background: rgba(255, 0, 0, 0.25) !important;
+    color: rgba(0, 0, 0, 0.15) !important;
+    border: solid 2px transparent !important;
+    transform: scale(1,1) !important;
 }
 
 #keyboard-title{
@@ -174,17 +181,27 @@
     width: 40px;
     margin: auto;
     filter: saturate(0);
-    transition: 0.15s;
+    transition: 0.35s;
 }
 
 .packs ul li img:hover{
     filter: saturate(1);
+    transform: rotate(360deg);
 }
 
 
 .packs ul li:hover{
     border: solid 2px rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.25);
+}
+
+.pack-active{
+    border: solid 2px rgba(255, 255, 255, 0.35) !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.pack-active img{
+    filter: saturate(1) !important;
 }
 
 
